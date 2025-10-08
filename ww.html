@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Página con breakpoints por contenido</title>
+ <style>
+ *, *::before, *::after { box-sizing: border-box; }
+ body {
+ margin: 0;
+ font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+ line-height: 1.6; background: #f8fafc;
+ }
+ header, footer {
+ background: #111827; color: #fff;
+ padding: 1rem; text-align: center;
+ }
+ main { padding: 1rem; }
+ .wrap { max-width: 72rem; margin-inline: auto; }
+ /* Base (móvil): 1 columna */
+ .grid { display: grid; gap: 1rem; }
+ .content, .sidebar {
+ background: #fff; border-radius: .5rem; padding: 1rem;
+ box-shadow: 0 1px 2px rgba(0,0,0,.05);
+ }
+ .sidebar { background: #f3f4f6; }
+ /* Breakpoint cuando el contenido lo necesita (~768px) */
+ @media (min-width: 768px) {
+ .grid { grid-template-columns: 3fr 1fr; }
+ header h1 { font-size: 2rem; }
+ }
+ /* Ensanche y tipografía más cómoda en >=1024px */
+ @media (min-width: 1024px) {
+ .wrap { max-width: 70rem; }
+ body { font-size: 1.0625rem; }
+ }
+ </style>
+</head>
+<body>
+ <header><h1>Maquetación responsive basada en contenido</h1></header>
+ <main class="wrap">
+ <section class="grid">
+ <article class="content">
+ <h2>Contenido principal</h2>
+ <p>En móvil, una columna. A partir de ~768px, dos columnas con Grid.</p>
+ </article>
+ <aside class="sidebar">
+ <h2>Barra lateral</h2>
+ <p>Se coloca a la derecha cuando hay espacio suficiente.</p>
+ </aside>
+ </section>
+ </main>
+ <footer>© 2025 RWD</footer>
+</body>
+</html>

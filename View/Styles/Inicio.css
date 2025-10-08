@@ -1,0 +1,74 @@
+/*Inicio*/
+.inicio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.contenedor-principal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+/* Título estilo retro */
+.titulo-inicio {
+  font-size: 100px;
+  color: white;
+  text-shadow: 6px 6px 0px black;
+  margin-bottom: 80px;
+  margin-top: 0;
+}
+/* Menú */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-start;
+  width: 490px;
+}
+/* Botones */
+.btn {
+  width: 100%;
+  padding: 20px;
+  font-size: 30px;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: rgba(255, 0, 0, 0.6);
+}
+/* Carro flotante */
+.carro-box {
+  position: static;
+  bottom: unset;
+  right: unset;
+}
+.carro-box img {
+  width: 300px;
+  height: auto;
+  animation: flotar 2s ease-in-out infinite;
+}
+.carro-container {
+  background: rgba(0, 0, 0, 0.6);
+  border: 3px solid white;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0px 0px 15px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Animación flotante */
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}

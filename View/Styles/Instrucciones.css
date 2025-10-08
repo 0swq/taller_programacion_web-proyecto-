@@ -1,0 +1,26 @@
+/*Instrucciones*/
+/*Instrucciones*/
+.instrucciones-container {
+  width: 900px;
+  height: 650px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: none;
+  border-radius: 5px;
+  background: rgba(221, 221, 221, 0.59);
+}
+.instruccion-asset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.instruccion-asset img {
+  margin: 0 50px;
+}

@@ -1,0 +1,136 @@
+.General {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: -50px;
+}
+
+.volver {
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: 20px;
+  position: absolute;
+  top: 28px;
+  left: 20px;
+}
+
+.gameplay-container {
+  display: flex;
+  width: 80%;
+  max-width: 900px;
+  height: 90vh;
+  box-sizing: border-box;
+  background-color: black;
+  margin-top: 50px;
+}
+
+.white-column {
+  flex: 1; 
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  position: relative; /* IMPORTANTE para canvases */
+}
+
+.road {
+  flex: 2;
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative; /* IMPORTANTE para canvas */
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.progress-bar-background {
+  width: 80px;
+  height: 15px;
+  background-color: red;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 5px;
+}
+
+.progress-bar-fill {
+  width: 15%;
+  height: 100%;
+  background-color: green;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.dificultad {
+  color: black;
+}
+
+.porcentaje {
+  color: black;
+  align-self: flex-start;
+}
+
+.tiempo {
+  color: black;
+  align-self: flex-end;
+}
+
+.jugador {
+  position: relative;
+}
+
+.jugador img {
+  width: 100%;
+  max-width: 80px;
+}
+
+#izquierda canvas,
+#derecha canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: block;
+}
+
+#camino {
+  position: relative;
+  overflow: hidden;
+
+}
+
+#fondoCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#auto_horizontal {
+  position: relative;
+  z-index: 20;
+}
+#canvasCamino{
+    position:absolute;
+    width: 100%;
+  height: 100%;
+}

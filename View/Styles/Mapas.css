@@ -1,0 +1,40 @@
+/* Contenedor principal de la sección de mapas */
+.mapas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
+    width: 100%;
+    gap: 20px;
+}
+
+/* Estilos para el título de la sección de mapas */
+.mapas-titulo h2{
+    color: #fff;
+    font-size: 2em;
+    text-shadow: 4px 4px 0 #000;
+}
+
+/* Contenedor de las imágenes de mapas */
+.mapas-disponibles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilos para las imágenes de los mapas */
+.mapas-disponibles img {
+}
+
+/* Efecto al pasar el mouse sobre las imágenes de los mapas */
+.mapas-disponibles img:hover {
+    background-color: rgba(221, 221, 221, 0.59);
+    animation: flotar 2s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}

@@ -1,0 +1,97 @@
+.game-screen {
+    width: 80%;          
+    max-width: 1000px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;    
+    padding: 40px;
+    background-color: rgba(221, 221, 221, 0.59);
+    border-radius: 10px;
+  
+}
+
+
+
+
+#settings-screen {
+
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+}
+
+#settings-screen h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3em;
+    color: white;
+    text-shadow: 4px 4px 0px black;
+    margin-bottom: 30px;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 40px 60px;
+}
+
+.setting-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.setting-group label {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    color: white;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.volume-control input[type="range"] {
+    width: 250px;
+}
+
+.volume-control img {
+    width: 20px;
+}
+
+.controls-display {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.key-group img {
+    height: 70px; /* Tamaño de las imágenes del teclado */
+}
+.volver {
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1.2em;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.volver:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
