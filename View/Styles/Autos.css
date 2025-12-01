@@ -1,39 +1,63 @@
-
 .autos-container {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    height: 100vh; 
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    gap: 20px;
+    height: 100%;
+    gap: clamp(15px, 2vw, 20px);
+    padding: clamp(10px, 2vw, 20px);
+    box-sizing: border-box;
 }
 
 .auto-titulo {
-    color: #fff;
-    font-size: 2em;
-    text-shadow: 4px 4px 0 #000;
-    text-align:center;
+    color: White;
+    padding-top: clamp(20px, 4vw, 50px);
+    font-size: clamp(28px, 4vw, 50px);
+    text-shadow: clamp(2px, 0.3vw, 4px) clamp(2px, 0.3vw, 4px) 0 #000;
+    text-align: center;
 }
+
+.auto-titulo h2 {
+    margin: 0;
+    font-size: inherit;
+}
+
 .autos-disponibles {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    padding-top: clamp(15px, 3vw, 35px);
+    gap: clamp(15px, 2vw, 20px);
+    width: 100%;
+    max-width: 1400px;
 }
 
 .autos-disponibles img {
-    max-width: 400px;
+    width: clamp(200px, 25vw, 400px);
+    max-width: 100%;
     height: auto;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 clamp(5px, 1vw, 10px) rgba(255, 255, 255, 0.5);
     transition: transform 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
-    
+    border-radius: clamp(5px, 0.8vw, 10px);
 }
 
 .autos-disponibles img:hover {
     background-color: rgba(221, 221, 221, 0.59);
     animation: flotar 2s ease-in-out infinite;
+    transform: scale(1.05);
 }
 
-/* Animación flotante */
-
+@keyframes flotar {
+    0% {
+        transform: translateY(0) scale(1.05);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05);
+    }
+    100% {
+        transform: translateY(0) scale(1.05);
+    }
+}

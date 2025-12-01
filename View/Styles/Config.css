@@ -1,97 +1,127 @@
-.game-screen {
-    width: 80%;          
-    max-width: 1000px;   
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin: auto;    
-    padding: 40px;
-    background-color: rgba(221, 221, 221, 0.59);
-    border-radius: 10px;
-  
+#configuraciones {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100vh !important;
+    width: 100vw !important;
+    position: fixed !important;
 }
 
-
-
-
-#settings-screen {
-
-    background-size: cover;
-    background-position: center;
-    justify-content: flex-start;
-    padding-top: 50px;
+.game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: clamp(85%, 90%, 95%);
+    max-width: 1000px;
+    padding: clamp(10px, 3vw, 40px);
+    background-color: rgba(221, 221, 221, 0.59);
+    border-radius: clamp(8px, 2vw, 15px);
+    box-sizing: border-box;
+    margin: clamp(5px, 2vw, 25px);
 }
 
 #settings-screen h2 {
     font-family: 'Press Start 2P', cursive;
-    font-size: 3em;
+    font-size: clamp(1.2em, 4vw, 3em);
     color: white;
+    text-align: center;
     text-shadow: 4px 4px 0px black;
-    margin-bottom: 30px;
+    margin: 0 0 clamp(15px, 3vw, 30px) 0;
 }
 
 .settings-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: clamp(20px, 4vw, 40px);
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
     border: 2px solid white;
-    border-radius: 10px;
-    padding: 40px 60px;
+    border-radius: clamp(8px, 1vw, 10px);
+    padding: clamp(20px, 4vw, 60px);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .setting-group {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: clamp(10px, 2vw, 15px);
+    width: 100%;
 }
 
 .setting-group label {
     font-family: 'Press Start 2P', cursive;
-    font-size: 1.5em;
+    font-size: clamp(0.9em, 2vw, 1.5em);
     color: white;
+    text-align: center;
 }
 
 .volume-control {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: clamp(10px, 3vw, 15px);
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .volume-control input[type="range"] {
-    width: 250px;
+    width: clamp(150px, 30vw, 250px);
+    max-width: 90%;
 }
 
 .volume-control img {
-    width: 20px;
+    width: clamp(15px, 2vw, 25px);
+    flex-shrink: 0;
 }
 
 .controls-display {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: clamp(15px, 3vw, 30px);
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .key-group img {
-    height: 70px; /* Tamaño de las imágenes del teclado */
+    height: clamp(35px, 6vw, 70px);
+    transition: transform 0.3s;
 }
-.volver {
-    margin-top: 40px;
+
+#configuraciones .volver {
+    margin-top: clamp(10px, 2vw, 20px);
     background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid white;
     color: white;
-    padding: 10px 30px;
-    font-size: 1.2em;
+    padding: clamp(5px, 1vw, 10px) clamp(10px, 3vw, 30px);
+    font-size: clamp(0.8em, 2vw, 1.2em);
     font-family: 'Press Start 2P', cursive;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.volver:hover {
+#configuraciones .volver:hover {
     background-color: rgba(255, 255, 255, 0.4);
+}
+
+.key-group img:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    animation: flotar 2s ease-in-out infinite;
+    border-radius: 8px;
+}
+
+.seleccionado {
+    outline: 3px solid black;
+    outline-offset: 5px;
+    border-radius: 10px;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }

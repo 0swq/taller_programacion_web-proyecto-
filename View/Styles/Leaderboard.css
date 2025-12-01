@@ -1,0 +1,131 @@
+.contenedor-puntajes {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.filtros-puntajes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.boton-filtro {
+    padding: 10px 25px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    font-size: clamp(12px, 1.5vw, 16px);
+    transition: all 0.3s;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+.boton-filtro.activo {
+    border-color: #FFD700;
+    color: #000;
+}
+
+.boton-filtro:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.contenedor-tabla {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.tabla-puntajes {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.tabla-puntajes thead {
+    background: rgba(255, 215, 0, 0.3);
+}
+
+.tabla-puntajes th {
+    padding: 15px;
+    text-align: center;
+    font-size: clamp(12px, 1.5vw, 16px);
+    border-bottom: 2px solid #FFD700;
+}
+
+.tabla-puntajes td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: clamp(10px, 1.3vw, 14px);
+}
+
+.tabla-puntajes tbody tr:hover {
+    background: rgba(255, 215, 0, 0.1);
+    transition: background 0.3s;
+}
+
+.tabla-puntajes tbody tr:nth-child(1) {
+    background: rgba(255, 215, 0, 0.3);
+}
+
+.tabla-puntajes tbody tr:nth-child(2) {
+    background: rgba(192, 192, 192, 0.3);
+}
+
+.tabla-puntajes tbody tr:nth-child(3) {
+    background: rgba(205, 127, 50, 0.3);
+}
+
+.columna-posicion {
+    width: 80px;
+    font-weight: bold;
+}
+
+.columna-puntaje {
+    width: 180px;
+}
+
+.columna-tiempo {
+    width: 150px;
+}
+
+.helper {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tabla-puntajes tbody tr td[colspan] {
+    padding: 40px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: clamp(10px, 1.2vw, 14px);
+}
+
+@media (max-width: 600px) {
+    .contenedor-tabla {
+        padding: 10px;
+    }
+
+    .tabla-puntajes th,
+    .tabla-puntajes td {
+        padding: 8px;
+    }
+
+    .columna-posicion {
+        width: 50px;
+    }
+
+    .columna-puntaje,
+    .columna-tiempo {
+        width: auto;
+    }
+}

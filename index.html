@@ -1,275 +1,303 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>CONTROL</title>
-    <link rel="stylesheet" href="/View/Styles/Estilos.css" />
-    <link rel="stylesheet" href="/View/Styles/Inicio.css" />
-    <link rel="stylesheet" href="/View/Styles/Instrucciones.css" />
-    <link rel="stylesheet" href="/View/Styles/Gameplay.css" />
-    <link rel="stylesheet" href="/View/Styles/Config.css" />
-    <link rel="stylesheet" href="/View/Styles/Apertura.css" />
-    <link rel="stylesheet" href="/View/Styles/Autos.css" />
-  </head>
+    <link rel="stylesheet" href="/View/Styles/Estilos.css"/>
+    <link rel="stylesheet" href="/View/Styles/Inicio.css"/>
+    <link rel="stylesheet" href="/View/Styles/Instrucciones.css"/>
+    <link rel="stylesheet" href="/View/Styles/Gameplay.css"/>
+    <link rel="stylesheet" href="/View/Styles/Config.css"/>
+    <link rel="stylesheet" href="/View/Styles/Apertura.css"/>
+    <link rel="stylesheet" href="/View/Styles/Autos.css"/>
+    <link rel="stylesheet" href="/View/Styles/Leaderboard.css"/>
+</head>
 
-  <body>
-    <!-- Pantalla de apertura -->
-    <section id="apertura" class="Apertura">
-      <img src="/Recursos/Assets/CONTROL.png" class="op" />
-      <br />
-      <a id="continuarBtn" href="#inicio">Continuar</a>
-    </section>
+<body>
+<!-- Pantalla de apertura -->
+<section id="apertura" class="Apertura">
+    <img src="/Recursos/Assets/CONTROL.png" class="op"/>
+    <br/>
+    <a id="continuarBtn" style="color: white">Continuar</a>
+</section>
 
-    <!-- Inicio -->
-    <section id="inicio" class="General">
-      <div class="inicio-contenido">
+<!-- Inicio -->
+<section id="inicio" class="General">
+    <div class="inicio-container">
         <div class="titulo-inicio">CONTROL-CAR</div>
         <div class="contenedor-principal">
-          <div class="menu">
-            <a id="mapas_btn" href="#mapas" class="btn">Mapas</a>
-            <a id="autos_btn" href="#autos" class="btn">Autos</a>
-            <a id="instrucciones_btn" href="#instrucciones" class="btn"
-              >Instrucciones</a
-            >
-            <a id="configuraciones_btn" href="#configuraciones" class="btn"
-              >Configuraciones</a
-            >
-          </div>
-          <div class="carro-box">
-            <div class="carro-container">
-              <img
-                id="auto_actual_menu"
-                src="/Recursos/Assets/Car1.gif"
-                alt="Carro animado"
-              />
+            <div class="menu">
+                <a id="mapas_btn" class="btn">Mapas</a>
+                <a id="autos_btn" class="btn">Autos</a>
+                <a id="instrucciones_btn" class="btn">Instrucciones</a>
+                <a id="configuraciones_btn" class="btn">Configuraciones</a>
+                <a id="leaderboard_btn" class="btn">Puntajes</a>
             </div>
-          </div>
+            <div class="carro-box">
+                <div class="carro-container">
+                    <img
+                            id="auto_actual_menu"
+                            src="/Recursos/Assets/Car1.gif"
+                            alt="Carro animado"
+                    />
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Instrucciones -->
-    <section id="instrucciones" class="General">
-      <div class="instrucciones-container">
-        <h1>Instrucciones</h1>
+<!-- Tabla de Puntajes -->
+<section id="leaderboard" class="General">
+    <div class="contenedor-puntajes">
+        <div class="auto-titulo">Tabla de Posiciones</div>
+
+        <div class="filtros-puntajes">
+            <a class="boton-filtro activo" id="puntaje_btn">Por Puntaje</a>
+            <a class="boton-filtro" id="tiempo_btn">Por Tiempo</a>
+        </div>
+
+        <div class="contenedor-tabla">
+            <table class="tabla-puntajes">
+                <thead>
+                <tr>
+                    <th class="columna-posicion">#</th>
+                    <th class="columna-puntaje">Puntaje</th>
+                    <th class="columna-tiempo">Tiempo</th>
+                </tr>
+                </thead>
+                <tbody id="cuerpo-tabla-puntajes">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="helper">
+            <a id="volver_btn" class="volver">VOLVER</a>
+        </div>
+    </div>
+</section>
+<!-- Instrucciones -->
+<section id="instrucciones" class="General">
+    <div class="instrucciones-container">
+        <h1 class="titulo-instrucciones">Instrucciones</h1>
         <div class="instrucciones-contenido">
-          <p>
-            Para jugar debes moverte entre izquierda y derecha evitando los
-            obstáculos.
-          </p>
-          <p>
-            Conforme avance el tiempo la velocidad y los obstáculos aumentarán y
-            se verá reflejado en la barra.
-          </p>
-          <div class="instruccion-asset">
-            <img
-              src="/Recursos/Assets/road.png"
-              alt="Imagen carretera"
-              width="300"
-              height="300"
-              class="instruccion-asset"
-            />
-            <img
-              src="/Recursos/Assets/bar.png"
-              alt="Imagen barra"
-              width="300"
-              height="300"
-              class="instruccion-asset"
-            />
-          </div>
+            <p>
+                Para jugar debes moverte entre izquierda y derecha evitando los
+                obstáculos.
+            </p>
+            <p>
+                Conforme avance el tiempo la velocidad y los obstáculos aumentarán y
+                se verá reflejado en la barra.
+            </p>
+            <div class="instruccion-asset">
+                <img
+                        src="/Recursos/Assets/road.png"
+                        alt="Imagen carretera"
+                        width="300"
+                        height="300"
+                        class="instruccion-asset"
+                />
+                <img
+                        src="/Recursos/Assets/bar.png"
+                        alt="Imagen barra"
+                        width="300"
+                        height="300"
+                        class="instruccion-asset"
+                />
+            </div>
         </div>
-        <br /><br />
-        <a id="volver_btn" class="volver" href="#inicio">Volver </a>
-      </div>
-    </section>
+        <br/><br/>
+        <a id="volver_btn" class="volver">Volver </a>
+    </div>
+</section>
 
-    <!-- Mapas -->
-    <section id="mapas" class="General">
-      <div class="mapas">
-        <div class="auto-titulo">
-          <h2>Mapas</h2>
-        </div>
+<!-- Mapas -->
+<section id="mapas" class="General">
+    <div class="mapas">
+        <div class="auto-titulo">Mapas</div>
         <div class="autos-disponibles">
-          <a id="mapa1_btn" href="#gameplay">
-            <img src="/Recursos/Assets/Mapa1.png" alt="mapa1" />
-          </a>
-          <a id="mapa2_btn" href="#gameplay">
-            <img src="/Recursos/Assets/Mapa2.png" alt="mapa2" />
-          </a>
-          <a id="mapa3_btn" href="#gameplay">
-            <img src="/Recursos/Assets/Mapa3.png" alt="mapa3" />
-          </a>
+            <a id="mapa1_btn">
+                <img src="/Recursos/Assets/Mapa1.png" alt="mapa1"/>
+            </a>
+            <a id="mapa2_btn">
+                <img src="/Recursos/Assets/Mapa2.png" alt="mapa2"/>
+            </a>
+            <a id="mapa3_btn">
+                <img src="/Recursos/Assets/Mapa3.png" alt="mapa3"/>
+            </a>
         </div>
         <div class="helper">
-          <a id="volver_btn" class="volver" href="#inicio">VOLVER</a>
+            <a id="volver_btn" class="volver">VOLVER</a>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Gameplay -->
-    <section id="gameplay" class="General">
-      <a id="volver_gameplay_btn" href="#inicio" class="volver">VOLVER</a>
-      <div class="gameplay-container">
+
+<!-- Gameplay -->
+<section id="gameplay" class="General">
+    <a id="volver_gameplay_btn" class="volver">VOLVER</a>
+    <div class="gameplay-container">
         <!-- Columna Izquierda -->
         <div id="izquierda" class="white-column">
-          <canvas id="canvasIzquierda"></canvas>
-          <div class="top-bar-left">
-            <div class="progress-bar-background">
-              <div class="progress-bar-fill"></div>
+            <canvas id="canvasIzquierda"></canvas>
+            <div class="top-bar-left">
+                <div class="progress-bar-background">
+                    <div id="progreso" class="progress-bar-fill"></div>
+                </div>
+                <span id="dificultad" class="dificultad">0%</span>
             </div>
-            <span class="dificultad">15%</span>
-          </div>
-          <span class="puntaje">000000</span>
+            <span id="puntaje" class="puntaje">000000</span>
         </div>
 
         <!-- Camino -->
         <div id="camino" class="road">
-          <canvas id="canvasCamino"></canvas>
-          <div id="auto_horizontal" class="jugador">
-            </div>
+            <canvas id="canvasCamino"></canvas>
+            <div id="auto_horizontal" class="jugador"></div>
         </div>
 
         <!-- Columna Derecha -->
         <div id="derecha" class="white-column">
-          <canvas id="canvasDerecha"></canvas>
-          <div id="temporizador" class="tiempo">00:00</div>
+            <canvas id="canvasDerecha"></canvas>
+            <div id="temporizador" class="tiempo">00:00</div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Configuraciones -->
-    <section id="configuraciones" class="General">
-      <div id="settings-screen" class="game-screen">
+<!-- Configuraciones -->
+<section id="configuraciones" class="General">
+    <div id="settings-screen" class="game-screen">
         <h2>CONFIGURACIÓN</h2>
         <div class="settings-container">
-          <div class="setting-group">
-            <label for="music-volume">Música</label>
-            <div class="volume-control">
+            <div class="setting-group">
+                <label for="musica-volumen">Música</label>
+                <div class="volume-control">
               <span
-                ><img
-                  src="/Recursos/Assets/bajar-volumen.png"
-                  alt="Icono de altavoz"
+              ><img
+                      src="/Recursos/Assets/bajar-volumen.png"
+                      alt="Icono de altavoz"
               /></span>
-              <input
-                type="range"
-                id="music-volume"
-                min="0"
-                max="1"
-                step="0.1"
-                value="0.5"
-              />
-              <span
-                ><img
-                  src="/Recursos/Assets/volumen+.png"
-                  alt="Icono de altavoz con más"
-              /></span>
+                    <input
+                            type="range"
+                            id="musica-volumen"
+                            min="0"
+                            max="1"
+                            step="0.1"
+                            value="0.4"
+                    />
+                    <span
+                    ><img
+                            src="/Recursos/Assets/volumen+.png"
+                            alt="Icono de altavoz con más"
+                    /></span>
+                </div>
             </div>
-          </div>
-          <div class="setting-group">
-            <label for="sfx-volume">Sonido</label>
-            <div class="volume-control">
+            <div class="setting-group">
+                <label for="sonido-volume">Sonido</label>
+                <div class="volume-control">
               <span
-                ><img
-                  src="/Recursos/Assets/bajar-volumen.png"
-                  alt="Icono de altavoz"
+              ><img
+                      src="/Recursos/Assets/bajar-volumen.png"
+                      alt="Icono de altavoz"
               /></span>
-              <input
-                type="range"
-                id="sfx-volume"
-                min="0"
-                max="1"
-                step="0.1"
-                value="0.8"
-              />
-              <span
-                ><img
-                  src="/Recursos/Assets/volumen+.png"
-                  alt="Icono de altavoz con más"
-              /></span>
+                    <input
+                            type="range"
+                            id="sonido-volume"
+                            min="0"
+                            max="1"
+                            step="0.1"
+                            value="0.4"
+                    />
+                    <span
+                    ><img
+                            src="/Recursos/Assets/volumen+.png"
+                            alt="Icono de altavoz con más"
+                    /></span>
+                </div>
             </div>
-          </div>
-          <div class="setting-group">
-            <label>Controles</label>
-            <div class="controls-display">
-              <div class="key-group">
-                <img
-                  src="/Recursos/Assets/botones_flechas.png"
-                  alt="Teclas de flecha"
-                />
-              </div>
-              <div class="key-group">
-                <img
-                  src="/Recursos/Assets/botones_wasd.png"
-                  alt="Teclas WASD"
-                />
-              </div>
+            <div class="setting-group">
+                <label>Controles</label>
+                <div class="controls-display">
+                    <div class="key-group">
+                        <img
+                                src="/Recursos/Assets/botones_flechas.png"
+                                alt="Teclas de flecha"
+                                id="control-flechas"
+                                class="control-option"
+                        />
+                    </div>
+                    <div class="key-group">
+                        <img
+                                src="/Recursos/Assets/botones_wasd.png"
+                                alt="Teclas WASD"
+                                id="control-wasd"
+                                class="control-option"
+                        />
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <a id="volver_btn" class="volver" href="#inicio">VOLVER</a>
-      </div>
-    </section>
+        <a id="volver_btn" class="volver">VOLVER</a>
+    </div>
+</section>
 
-    <!-- Autos -->
-    <section id="autos" class="General">
-      <div class="autos-container">
+<!-- Autos -->
+<section id="autos" class="General">
+    <div class="autos-container">
         <div class="auto-titulo">
-          <h2>Autos disponibles</h2>
+            <h2>Autos disponibles</h2>
         </div>
         <div class="autos-disponibles">
-          <img
-            id="seleccionar_auto_1"
-            src="/Recursos/Assets/Car1.gif"
-            alt="auto1"
-          />
-          <img
-            id="seleccionar_auto_2"
-            src="/Recursos/Assets/Car2.gif"
-            alt="auto2"
-          />
-          <img
-            id="seleccionar_auto_3"
-            src="/Recursos/Assets/Car3.gif"
-            alt="auto3"
-          />
+            <img
+                    id="seleccionar_auto_1"
+                    src="/Recursos/Assets/Car1.gif"
+                    alt="auto1"
+            />
+            <img
+                    id="seleccionar_auto_2"
+                    src="/Recursos/Assets/Car2.gif"
+                    alt="auto2"
+            />
+            <img
+                    id="seleccionar_auto_3"
+                    src="/Recursos/Assets/Car3.gif"
+                    alt="auto3"
+            />
         </div>
         <div class="helper">
-          <a id="volver_btn" class="volver" href="#inicio">VOLVER</a>
+            <a id="volver_btn" class="volver">VOLVER</a>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <!--Audios precargados-->
-    <audio
-      id="click"
-      src="/Recursos/Songs/Effects/click.wav"
-      preload="auto"
-    ></audio>
-    <audio
-      id="click2"
-      src="/Recursos/Songs/Effects/click2.wav"
-      preload="auto"
-    ></audio>
-    <audio
-      id="crash"
-      src="/Recursos/Songs/Effects/crash.wav"
-      preload="auto"
-    ></audio>
-    <audio
-      id="cuenta_regresiva"
-      src="/Recursos/Songs/Effects/cuenta_regresiva.mp3"
-      preload="auto"
-    ></audio>
-    <audio
-      id="musica_menu"
-      src="../Recursos/Songs/Music/Menu.mp3"
-      autoplay
-    ></audio>
-    <audio id="musica_gameplay" preload="auto"></audio>
-    <!--Scripts-->
-    <script src="/src/Core/global.js"></script>
-    <script src="/src/Core/OP.js"></script>
-    <script src="/src/Core/Seleccion.js"></script>
-    <script src="/src/Core/gameplay.js"></script>
-  </body>
+<!--Audios precargados-->
+<audio
+        id="click"
+        src="/Recursos/Songs/Effects/click.wav"
+        preload="auto"
+></audio>
+<audio
+        id="click2"
+        src="/Recursos/Songs/Effects/click2.wav"
+        preload="auto"
+></audio>
+<audio
+        id="crash"
+        src="/Recursos/Songs/Effects/crash.wav"
+        preload="auto"
+></audio>
+<audio
+        id="cuenta_regresiva"
+        src="/Recursos/Songs/Effects/cuenta_regresiva.mp3"
+        preload="auto"
+></audio>
+<audio
+        id="musica_menu"
+        src="/Recursos/Songs/Music/Menu.mp3"
+        autoplay
+></audio>
+<audio id="coin" src="/Recursos/Songs/Effects/coin.wav" autoplay></audio>
+<audio id="musica_gameplay" preload="auto"></audio>
+<!--Scripts-->
+<script type="module" src="./src/main.js" defer></script>
+</body>
 </html>

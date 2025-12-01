@@ -1,26 +1,51 @@
-/*Instrucciones*/
-/*Instrucciones*/
+
 .instrucciones-container {
-  width: 900px;
-  height: 650px;
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: none;
-  border-radius: 5px;
-  background: rgba(221, 221, 221, 0.59);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(300px, 95vw, 900px);
+    padding: clamp(15px, 3vw, 30px);
+    margin: auto;
+    border-radius: clamp(5px, 1vw, 10px);
+    background: rgba(221, 221, 221, 0.59);
+    box-sizing: border-box;
 }
+
+.titulo-instrucciones {
+    font-family: 'Press Start 2P', cursive;
+    font-size: clamp(24px, 6vw, 60px);
+    color: white;
+    text-align: center;
+    text-shadow: clamp(3px, 0.7vw, 5px) clamp(3px, 0.7vw, 5px) 0px black;
+    margin-top: 0;
+    margin-bottom: clamp(20px, 4vh, 40px);
+}
+
+.instrucciones-contenido p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: clamp(12px, 2.5vw, 18px);
+    color: white;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: clamp(10px, 2vw, 20px);
+    text-shadow: 2px 2px 0px black;
+}
+
 .instruccion-asset {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(10px, 4vw, 50px);
+    margin-top: clamp(15px, 3vw, 25px);
+    width: 100%;
 }
+
 .instruccion-asset img {
-  margin: 0 50px;
+    width: clamp(150px, 30vw, 300px);
+    height: clamp(150px, 30vw, 300px);
+
+    border-radius: clamp(4px, 0.5vw, 8px);
+    transition: transform 0.3s;
 }

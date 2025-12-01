@@ -1,136 +1,179 @@
-.General {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding-top: -50px;
-}
-
 .volver {
-  margin-bottom: 20px;
-  margin-right: auto;
-  margin-left: 20px;
-  position: absolute;
-  top: 28px;
-  left: 20px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: 20px;
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    z-index: 100;
 }
 
 .gameplay-container {
-  display: flex;
-  width: 80%;
-  max-width: 900px;
-  height: 90vh;
-  box-sizing: border-box;
-  background-color: black;
-  margin-top: 50px;
+    display: flex;
+    width: 900px;
+    max-width: 90vw;
+    height: 600px;
+    max-height: 90vh;
+    box-sizing: border-box;
+    background-color: black;
+    margin: 50px auto 0;
 }
 
 .white-column {
-  flex: 1; 
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  box-sizing: border-box;
-  justify-content: space-between;
-  position: relative; /* IMPORTANTE para canvases */
+    flex: 1;
+    min-width: 0;
+    max-width: 225px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
 }
 
 .road {
-  flex: 2;
-  background-color: #333333;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-  position: relative; /* IMPORTANTE para canvas */
+    flex: 2;
+    min-width: 0;
+    max-width: 450px;
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
 .top-bar-left {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+    gap: 5px;
+    position: relative;
+    z-index: 10;
 }
 
 .progress-bar-background {
-  width: 80px;
-  height: 15px;
-  background-color: red;
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
-  margin-right: 5px;
+    width: 80px;
+    height: 15px;
+    background-color: red;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 5px;
+    z-index: 10;
+    flex-shrink: 0;
 }
 
 .progress-bar-fill {
-  width: 15%;
-  height: 100%;
-  background-color: green;
-  border-radius: 5px;
-  position: absolute;
-  left: 0;
-  top: 0;
+    width: 0;
+    height: 100%;
+    background-color: green;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
 }
 
 .dificultad {
-  color: black;
+    color: black;
+    z-index: 10;
+    font-size: 14px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    position: relative;
 }
 
 .porcentaje {
-  color: black;
-  align-self: flex-start;
+    color: black;
+    align-self: flex-start;
+    font-size: 14px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 10;
 }
 
 .tiempo {
-  color: black;
-  align-self: flex-end;
+    color: black;
+    align-self: flex-end;
+    z-index: 10;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-top: auto;
+    position: relative;
 }
 
 .jugador {
-  position: relative;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .jugador img {
-  width: 100%;
-  max-width: 80px;
+    width: 80px;
+    height: auto;
 }
 
 #izquierda canvas,
 #derecha canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
 }
 
 #camino {
-  position: relative;
-  overflow: hidden;
-
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 #fondoCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
 #auto_horizontal {
-  position: relative;
-  z-index: 20;
+    position: relative;
+    z-index: 20;
 }
-#canvasCamino{
-    position:absolute;
+
+#canvasCamino {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-  height: 100%;
+    height: 100%;
+}
+
+.puntaje {
+    z-index: 10;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    white-space: nowrap;
+    position: relative;
+}
+
+@media (max-width: 900px) {
+    .gameplay-container {
+        --escala: calc(100vw / 900);
+        transform: scale(var(--escala));
+        transform-origin: top center;
+    }
 }
